@@ -10,6 +10,9 @@ export default function DrillsIndex() {
       <Link href="/drills/day-3">
         <Text>Day 3 · Note composer</Text>
       </Link>
+      <Link href="/drills/day-4">
+        <Text>Day 4 · Touch and press</Text>
+      </Link>
     </ScrollView>
   );
 }
