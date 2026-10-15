@@ -39,7 +39,7 @@ const bgColor = Platform.select<() => ColorValue>({
   default: () => "#ffffff",
 })();
 
-export default function DrillScreen() {
+export default function Drill2Screen() {
   return (
     <View style={{ flex: 1, backgroundColor: bgColor }}>
       <SafeAreaView style={{ flex: 1 }}>
