@@ -1,0 +1,56 @@
+
+## 01-effect-save-1: Save case 1 (useEffect [] deps) #1
+before: Count: 2 | Count: 3 | Taps: 4
+after:  Count: 2 | Count: 3 | Taps: 4
+logs:
+  [case-1] module evaluated
+  [case-1] cleanup
+  [case-1] mounted
+
+## 02-effect-save-2: Save case 1 (useEffect [] deps) #2
+before: Count: 2 | Count: 3 | Taps: 4
+after:  Count: 2 | Count: 3 | Taps: 4
+logs:
+  [case-1] module evaluated
+  [case-1] cleanup
+  [case-1] mounted
+
+## 03-case-2-nested: Case 2: edit THEME in nested component file
+before: Count: 2 | Count: 3 | Taps: 4
+after:  Count: 2 | Count: 3 | Taps: 4
+logs:
+  [case-2] module evaluated
+  [case-2] cleanup
+  [case-2] mounted
+
+## 04-case-2b-route: Case 2b: route file exports THEME, edit route
+before: Count: 2 | Count: 3 | Taps: 4
+after:  Count: 0 | Count: 0 | Taps: 0
+logs:
+  [case-1] cleanup
+  [case-2] cleanup
+  [case-3] cleanup
+  [case-1] mounted
+  [case-2] mounted
+  [case-3] mounted
+
+## 05-case-3-broken: Case 3 (before refactor): edit screen file
+before: Count: 2 | Count: 3 | Taps: 4
+after:  Count: 0 | Count: 0 | Taps: 0
+logs:
+  [case-1] module evaluated
+  [case-2] module evaluated
+  WARN Require cycle: src/components/fast-refresh-drill/case-3-theme-imported-by-utility-screen.tsx -> src/utils/format-count-label.ts -> src/compo
+  [format-count-label] module evaluated
+  [case-3] module evaluated
+  [case-1] mounted
+  [case-2] mounted
+  [case-3] mounted
+
+## 06-case-3-fixed: Case 3 (after refactor): edit screen file
+before: Count: 2 | Count: 3 | Taps: 4
+after:  Count: 2 | Count: 3 | Taps: 4
+logs:
+  [case-3] module evaluated
+  [case-3] cleanup
+  [case-3] mounted
