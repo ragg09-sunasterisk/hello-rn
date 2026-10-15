@@ -13,6 +13,9 @@ export default function DrillsIndex() {
       <Link href="/drills/day-4">
         <Text>Day 4 · Touch and press</Text>
       </Link>
+      <Link href="/drills/day-5">
+        <Text>Day 5 · Five thousand rows</Text>
+      </Link>
     </ScrollView>
   );
 }

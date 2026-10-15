@@ -40,6 +40,7 @@ export default function DayFourScreen() {
       />
       <AppButton title="Save" loading={loading} onPress={fakeSave} />
 
+      <Text style={styles.heading}>2. 24×24 icon button</Text>
       <View style={styles.row}>
         <View style={styles.slopOutline}>
           <IconButton
