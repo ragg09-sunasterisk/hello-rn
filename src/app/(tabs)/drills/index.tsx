@@ -7,14 +7,21 @@ export default function DrillsIndex() {
       <Link href="/drills/day-2">
         <Text>Day 2 · Layout and flexbox</Text>
       </Link>
+
       <Link href="/drills/day-3">
         <Text>Day 3 · Note composer</Text>
       </Link>
+
       <Link href="/drills/day-4">
         <Text>Day 4 · Touch and press</Text>
       </Link>
+
       <Link href="/drills/day-5">
         <Text>Day 5 · Five thousand rows</Text>
+      </Link>
+
+      <Link href="/drills/day-7">
+        <Text>Day 7 · API client</Text>
       </Link>
     </ScrollView>
   );
