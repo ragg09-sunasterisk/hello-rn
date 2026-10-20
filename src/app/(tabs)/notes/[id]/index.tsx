@@ -2,11 +2,12 @@ import { router, Stack, useLocalSearchParams } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 
 import { AppButton } from "@/components/app-button";
-import { getNote } from "@/utils/fake-notes";
+import { useNotesStore } from "@/providers/notes-provider";
 
 export default function NoteDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const note = getNote(id);
+  const { notes } = useNotesStore();
+  const note = notes.find((n) => n.id === id);
 
   if (!note) {
     return (
@@ -21,6 +22,7 @@ export default function NoteDetailScreen() {
     <View style={styles.screen}>
       <Stack.Screen options={{ title: note.title }} />
       <Text>Detail for note id: {note.id}</Text>
+      <Text>Sync status: {note.status}</Text>
       <AppButton
         title="Edit"
         onPress={() =>
