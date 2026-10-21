@@ -27,6 +27,10 @@ export default function DrillsIndex() {
       <Link href="/drills/day-9">
         <Text>Day 9 · Gallery</Text>
       </Link>
+
+      <Link href="/drills/day-10">
+        <Text>Day 10 · Platform-specific</Text>
+      </Link>
     </ScrollView>
   );
 }

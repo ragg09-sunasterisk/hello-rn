@@ -29,7 +29,11 @@ export function IconButton({
         debug && styles.debugBox,
       ]}
     >
-      <Text style={styles.icon}>{icon}</Text>
+      {/* A glyph in a fixed 24×24 box: scaling it would clip it. The meaning is
+    already in accessibilityLabel, which screen readers announce. */}
+      <Text style={styles.icon} allowFontScaling={false}>
+        {icon}
+      </Text>
     </Pressable>
   );
 }
